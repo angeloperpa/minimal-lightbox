@@ -1,6 +1,7 @@
 <html>
 	<head>
-		<title>Minimal Lightbox</title>
+		<title>Minimal Lightbox - Alpha</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
 	</head>
 	<style>
 		@import 'https://fonts.googleapis.com/css?family=Abel';
@@ -29,11 +30,12 @@
 		#image {
 			width: 100%;
 			text-align: center;
+
 		}
 		#image img {
 			height: auto;
-			width: 320px;
-			margin: 40px 0px;
+			width: 300px;
+			margin: 10px 0px;
 		}
 		#usage {
 			width: 100%;
@@ -80,8 +82,8 @@
 	</style>
 	<body>
 		<section id="header">
-			Minimal Lightbox Responsive<br>
-			<span>Minimal Lightbox Responsive without jQuery, just JavaScript and some CSS</span><br>
+			Minimal Lightbox Responsive<font style="font-size: 7px"> alpha</font><br>
+			<span>Minimal Lightbox without jQuery, just JavaScript and some CSS</span><br>
 			<a href="https://github.com/angeloperpa/minimal-lightbox/archive/master.zip"><div class="download">Download zip</div></a>
 			<a href="https://github.com/angeloperpa/minimal-lightbox/archive/master.tar.gz"><div class="download">Download tar.gz</div></a>
 			<a href="https://github.com/angeloperpa/minimal-lightbox"><div class="download">Project Github</div></a>
@@ -95,7 +97,12 @@
 			<pre style='color:#000000;background:#f1f0f0;'><span style='color:#a65700; '>&lt;</span><span style='color:#400000; font-weight:bold; '>script</span><span style='color:#074726; '> </span><span style='color:#074726; '>type</span><span style='color:#806030; '>=</span><span style='color:#e60000; '>"text/javascript"</span><span style='color:#074726; '> </span><span style='color:#074726; '>src</span><span style='color:#806030; '>=</span><span style='color:#e60000; '>"minimal.lightbox.js"</span><span style='color:#a65700; '>></span><span style='color:#a65700; '>&lt;/</span><span style='color:#400000; font-weight:bold; '>script</span><span style='color:#a65700; '>></span></pre>
 			<h3>In image add attribute <span>minimal-lightbox</span></h3>
 			<pre style='color:#000000;background:#f1f0f0;'><span style='color:#a65700; '>&lt;</span><span style='color:#400000; font-weight:bold; '>img</span><span style='color: blue; '> minimal-lightbox </span><span style='color:#074726; '>src</span><span style='color:#806030; '>=</span><span style='color:#e60000; '>"img/factory.jpg"</span><span style='color:#a65700; '>/></span></pre>
+			<h3>Thumbnail option</h3>
+			<section id="image">
+				<img minimal-lightbox="img/factory.jpg" src="img/factory-thumbnail.jpg"/>
+			</section>
+			<pre style='color:#000000;background:#f1f0f0;'><span style='color:#a65700; '>&lt;</span><span style='color:#400000; font-weight:bold; '>img</span><span style='color: blue; '> minimal-lightbox=<span style='color:#e60000; '>"img/factory.jpg" </span></span><span style='color:#074726; '>src</span><span style='color:#806030; '>=</span><span style='color:#e60000; '>"img/factory-thumbnail.jpg"</span><span style='color:#a65700; '>/></span></pre>
 		</section>
-		<script type="text/javascript" src="minimal.lightbox.js"></script>
+		<script src="minimal.lightbox.js" type="text/javascript"></script>
 	</body>
 </html>
