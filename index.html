@@ -1,0 +1,101 @@
+<html>
+	<head>
+		<title>Minimal Lightbox</title>
+	</head>
+	<style>
+		@import 'https://fonts.googleapis.com/css?family=Abel';
+		body {
+			margin: 0;
+			font-family: 'Abel';
+		}
+		#header  {
+			width: 100%;
+			height: 200px;
+			background-color: #333;
+			text-align: center;
+			font-size: 20px;
+			color: #FFF;
+			line-height: 65px;
+			text-transform: uppercase;
+		}
+		#header span {
+			font-size: 14px;
+		}
+		@media(max-width: 520px) {
+			#header span {
+				font-size: 8px;
+			}
+		}
+		#image {
+			width: 100%;
+			text-align: center;
+		}
+		#image img {
+			height: auto;
+			width: 320px;
+			margin: 40px 0px;
+		}
+		#usage {
+			width: 100%;
+			text-align: center;
+		}
+		#usage pre {
+			padding: 3px;
+		}
+		#usage h3 {
+			text-transform: uppercase;
+		}
+		#usage h3 span {
+			color: blue;
+			font-size: 12px;
+		}
+		@media(max-width: 530px) {
+			#usage pre {
+				font-size: 10px;
+			}
+		}
+		@media(max-width: 400px) {
+			#usage pre {
+				font-size: 8px;
+			}
+		}
+		.download {
+			display: inline;
+			padding: 10px;
+			font-size: 10px;
+			background-color: rgba(255, 255, 255, 0.2);
+			border: 1px solid rgba(255, 255, 255, 1);
+			margin: 0px 2px;
+		}
+		.download:hover {
+			background-color: rgba(255, 255, 255, 0.1);
+		}
+		#header a {
+			color: #FFF;
+			text-decoration: none;
+		}
+		#header a:visited {
+			color: #FFF;
+		}
+	</style>
+	<body>
+		<section id="header">
+			Minimal Lightbox Responsive<br>
+			<span>Minimal Lightbox Responsive without jQuery, just JavaScript and some CSS</span><br>
+			<a href="https://github.com/angeloperpa/minimal-lightbox/archive/master.zip"><div class="download">Download zip</div></a>
+			<a href="https://github.com/angeloperpa/minimal-lightbox/archive/master.tar.gz"><div class="download">Download tar.gz</div></a>
+			<a href="https://github.com/angeloperpa/minimal-lightbox"><div class="download">Project Github</div></a>
+
+		</section>
+		<section id="image">
+			<img minimal-lightbox src="img/factory.jpg"/>
+		</section>
+		<section id="usage">
+			<h3>Before body tag close</h3>
+			<pre style='color:#000000;background:#f1f0f0;'><span style='color:#a65700; '>&lt;</span><span style='color:#400000; font-weight:bold; '>script</span><span style='color:#074726; '> </span><span style='color:#074726; '>type</span><span style='color:#806030; '>=</span><span style='color:#e60000; '>"text/javascript"</span><span style='color:#074726; '> </span><span style='color:#074726; '>src</span><span style='color:#806030; '>=</span><span style='color:#e60000; '>"minimal.lightbox.js"</span><span style='color:#a65700; '>></span><span style='color:#a65700; '>&lt;/</span><span style='color:#400000; font-weight:bold; '>script</span><span style='color:#a65700; '>></span></pre>
+			<h3>In image add attribute <span>minimal-lightbox</span></h3>
+			<pre style='color:#000000;background:#f1f0f0;'><span style='color:#a65700; '>&lt;</span><span style='color:#400000; font-weight:bold; '>img</span><span style='color: blue; '> minimal-lightbox </span><span style='color:#074726; '>src</span><span style='color:#806030; '>=</span><span style='color:#e60000; '>"img/factory.jpg"</span><span style='color:#a65700; '>/></span></pre>
+		</section>
+		<script type="text/javascript" src="minimal.lightbox.js"></script>
+	</body>
+</html>
