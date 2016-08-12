@@ -23,10 +23,12 @@ function minimalLightbox() {
 	closeAll.addEventListener('click', closeImage);
 
 	topLayer.setAttribute('style', 'height: 100%; width: 100%; top: 0; left: 0; position: fixed; background-color: rgba(0, 0, 0, 0.9);');
-	displayImage.setAttribute('style','position: fixed; left: 5%; top: 5%; width: 90%; height: 90%; background-image: url("' + imageSelect + '");  background-size: contain; background-position: center center; background-repeat: no-repeat; background-attachment: fixed');
+	displayImage.setAttribute('style','position: fixed; left: 5%; top: 5%; width: 90%; height: 90%; background-image: url("' + imageSelect + '");  background-size: contain; background-position: center center; background-repeat: no-repeat;');
 	closeAll.setAttribute('style', 'position: fixed; right: 20px; top: 20px; font-size: 20px; color: #FFF; cursor: pointer;');
 	body = document.getElementsByTagName("body")[0];
-	body.setAttribute('style', 'height: 100%; width: 100%; overflow: hidden; position: fixed;');
+	body.setAttribute('style', 'height: 100%; width: 100%; overflow: hidden;');
+
+	window.addEventListener('touchmove', closeImage);
 }
 function closeImage() {
 	body = document.getElementsByTagName('body')[0];
