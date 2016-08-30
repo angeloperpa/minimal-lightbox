@@ -38,8 +38,19 @@ function closeImage() {
 	layerDelete = document.getElementById('top-layer');
 	layerDelete.parentNode.removeChild(layerDelete);
 }
+function preload() {
+	for(var i = 0; i < imagesArray.length; i++) {
+		if(imagesArray[i].hasAttribute('preload') && imagesArray[i].hasAttribute('minimal-lightbox')) {
+			var createImage = new Image();
+			if(imagesArray[i].getAttribute('minimal-lightbox') != '') {
+				createImage.src = imagesArray[i].getAttribute('minimal-lightbox');
+			}
+		}
+	}
+}
 for (var i = 0; i < imagesArray.length; i++) {
 	if(imagesArray[i].hasAttribute('minimal-lightbox')) {
 		imagesArray[i].addEventListener('click', minimalLightbox, false);
 	}
 }
+preload();
