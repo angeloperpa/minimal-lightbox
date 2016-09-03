@@ -2,7 +2,6 @@
 <html>
 <head>
 	<link href='https://fonts.googleapis.com/css?family=Bungee+Hairline' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="http://icono-49d6.kxcdn.com/icono.min.css"> <!-- http://saeedalipoor.github.io/icono/ -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
 	<style>
 		body {
@@ -11,14 +10,17 @@
 			font-family: 'Helvetica';
 		}
 		#header span {
+			font-family: 'Helvetica';
+			font-size: 10px;
 			padding: 12px;
-			border: 1px solid #C2C2C2;
+			border: 1px solid rgba(0 , 0, 0, 0.8);
 			display: inline-block;
 			width: 120px;
 			cursor: default;
+			color: #000000;
 		}
 		#header span:hover {
-			background-color: rgba(0, 0, 0, 0.5);
+			background-color: rgba(0, 0, 0, 0.1);
 		}
 		#header {
 			font-family: 'Bungee Hairline', cursive;
@@ -26,7 +28,7 @@
 			margin-bottom: 60px;
 		}
 		#header h1 {
-			color: #C2C2C2;
+			color: #000000;
 			margin: 70px 0px;
 		}
 		#about {
@@ -57,7 +59,7 @@
 				width: 100%;
 			}
 			pre {
-				font-size: 8px;
+				font-size: 7px;
 			}
 		}
 	</style>
@@ -66,8 +68,8 @@
 <body>
 	<section id="header">
 		<h1>MINIMAL LIGHTBOX RESPONSIVE</h1>
-		<a href="https://github.com/angeloperpa/minimal-lightbox"><span>SOURCE CODE <i class="icono-file"></i></span></a>
-		<a href="https://github.com/angeloperpa/minimal-lightbox/archive/master.zip"><span>DOWNLOAD <i class="icono-heart"></i></span></a>
+		<a href="https://github.com/angeloperpa/minimal-lightbox"><span>SOURCE CODE</span></a>
+		<a href="https://github.com/angeloperpa/minimal-lightbox/archive/master.zip"><span>DOWNLOAD</span></a>
 	</section>
 	<section id="about">
 		<h1>Initialize with HTML</h1>
@@ -77,9 +79,9 @@
 		<img minimal-lightbox src="img/factory.jpg"/>
 		<pre style='color:#000020;'><span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>img</span><span style='color:#FF0000; '> minimal-lightbox </span><span style='color:#074726; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"image.jpg"</span><span style='color:#0057a6; '>/></span></pre>
 		<h1>Thumbnail Option</h1>
-		Include in <font style="background: #DDDDDD; color: #FF0000"">minimal-lightbox</font> the original image, and in <font style="background: #DDDDDD; color: #FF0000"">src</font> the thumbnail image. For example: <br>
+		Include in <font style="background: #DDDDDD; color: #FF0000"">minimal-lightbox</font> the original image, and in <font style="background: #DDDDDD; color: #FF0000"">src</font> the thumbnail image. Use preload attribute to load original image before the click. For example: <br>
 		<img preload minimal-lightbox="img/factory.jpg" src="img/factory-thumbnail.jpg"/>
-		<pre style='color:#000020;'><span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>img</span><span style='color:#FF0000; '> minimal-lightbox</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"image.jpg"</span><span style='color:#474796; '> </span><span style='color:#074726; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"image-thumbnail.jpg"</span><span style='color:#0057a6; '>/></span></pre>
+		<pre style='color:#000020;'><span style='color:#0057a6; '>&lt;</span><span style='color:#200080; font-weight:bold; '>img</span><span style='color:#FF0000; '> preload minimal-lightbox</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"image.jpg"</span><span style='color:#474796; '> </span><span style='color:#074726; '>src</span><span style='color:#308080; '>=</span><span style='color:#1060b6; '>"image-thumbnail.jpg"</span><span style='color:#0057a6; '>/></span></pre>
 	</section>
 	<script type="text/javascript" src="minimal.lightbox.js"></script>
 </body>
